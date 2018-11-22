@@ -1,0 +1,17 @@
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:mexfilerequiredapiversion
+/export:emlrtMexFcnProperties
+/export:getAllSlope
+/export:b_emlrt_marshallIn
+/export:emlrt_marshallIn
+/export:f_emlrt_marshallIn
+/export:emxEnsureCapacity_real_T
+/export:emxFree_real_T
+/export:emxInit_real_T
+/export:getAllSlope_initialize
+/export:getAllSlope_terminate
+/export:getAllSlope_atexit

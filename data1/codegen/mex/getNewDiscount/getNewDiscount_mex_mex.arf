@@ -1,0 +1,11 @@
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwblas.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:emlrtMexFcnProperties
+/export:getNewDiscount
+/export:getNewDiscount_initialize
+/export:getNewDiscount_terminate
+/export:getNewDiscount_atexit

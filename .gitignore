@@ -1,0 +1,8 @@
+sens-eval/allan-data/*
+*.log
+*.px4log
+*.asv
+*.orig
+*.opensdf
+*.mat
+codegen/*

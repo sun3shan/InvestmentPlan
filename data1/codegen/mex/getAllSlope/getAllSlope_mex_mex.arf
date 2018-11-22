@@ -1,0 +1,11 @@
+libemlrt.lib
+libcovrt.lib
+libut.lib
+libmwblas.lib
+libmwmathutil.lib
+/export:mexFunction
+/export:emlrtMexFcnProperties
+/export:getAllSlope
+/export:getAllSlope_initialize
+/export:getAllSlope_terminate
+/export:getAllSlope_atexit

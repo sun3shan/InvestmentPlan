@@ -1,0 +1,174 @@
+/*
+ * fprintf.c
+ *
+ * Code generation for function 'fprintf'
+ *
+ */
+
+/* Include files */
+#include "rt_nonfinite.h"
+#include "getNewDiscount.h"
+#include "fprintf.h"
+#include "getNewDiscount_mexutil.h"
+#include <stdio.h>
+
+/* Variable Definitions */
+static emlrtRSInfo f_emlrtRSI = { 38, "fprintf",
+  "E:\\Program Files\\MATLAB\\R2014b\\toolbox\\eml\\lib\\matlab\\iofun\\fprintf.m"
+};
+
+static emlrtRSInfo p_emlrtRSI = { 35, "fprintf",
+  "E:\\Program Files\\MATLAB\\R2014b\\toolbox\\eml\\lib\\matlab\\iofun\\fprintf.m"
+};
+
+static emlrtMCInfo emlrtMCI = { 69, 14, "fprintf",
+  "E:\\Program Files\\MATLAB\\R2014b\\toolbox\\eml\\lib\\matlab\\iofun\\fprintf.m"
+};
+
+static emlrtRSInfo ab_emlrtRSI = { 69, "fprintf",
+  "E:\\Program Files\\MATLAB\\R2014b\\toolbox\\eml\\lib\\matlab\\iofun\\fprintf.m"
+};
+
+/* Function Declarations */
+static const mxArray *b_feval(const emlrtStack *sp, const mxArray *b, const
+  mxArray *c, const mxArray *d, emlrtMCInfo *location);
+static real_T c_fprintf(const emlrtStack *sp, int32_T varargin_1);
+static real_T e_fprintf(const emlrtStack *sp);
+static const mxArray *feval(const emlrtStack *sp, const mxArray *b, const
+  mxArray *c, const mxArray *d, const mxArray *e, emlrtMCInfo *location);
+
+/* Function Definitions */
+static const mxArray *b_feval(const emlrtStack *sp, const mxArray *b, const
+  mxArray *c, const mxArray *d, emlrtMCInfo *location)
+{
+  const mxArray *pArrays[3];
+  const mxArray *m7;
+  pArrays[0] = b;
+  pArrays[1] = c;
+  pArrays[2] = d;
+  return emlrtCallMATLABR2012b(sp, 1, &m7, 3, pArrays, "feval", true, location);
+}
+
+static real_T c_fprintf(const emlrtStack *sp, int32_T varargin_1)
+{
+  const mxArray *y;
+  static const int32_T iv3[2] = { 1, 7 };
+
+  const mxArray *m1;
+  char_T cv6[7];
+  int32_T i;
+  static const char_T cv7[7] = { 'f', 'p', 'r', 'i', 'n', 't', 'f' };
+
+  const mxArray *b_y;
+  const mxArray *c_y;
+  static const int32_T iv4[2] = { 1, 15 };
+
+  char_T cv8[15];
+  static const char_T cv9[15] = { '\\', 'b', '\\', 'b', '\\', 'b', '\\', 'b',
+    '\\', 'b', '%', '3', 'd', '%', '%' };
+
+  const mxArray *d_y;
+  emlrtStack st;
+  st.prev = sp;
+  st.tls = sp->tls;
+  y = NULL;
+  m1 = emlrtCreateCharArray(2, iv3);
+  for (i = 0; i < 7; i++) {
+    cv6[i] = cv7[i];
+  }
+
+  emlrtInitCharArrayR2013a(sp, 7, m1, cv6);
+  emlrtAssign(&y, m1);
+  b_y = NULL;
+  m1 = emlrtCreateDoubleScalar(1.0);
+  emlrtAssign(&b_y, m1);
+  c_y = NULL;
+  m1 = emlrtCreateCharArray(2, iv4);
+  for (i = 0; i < 15; i++) {
+    cv8[i] = cv9[i];
+  }
+
+  emlrtInitCharArrayR2013a(sp, 15, m1, cv8);
+  emlrtAssign(&c_y, m1);
+  d_y = NULL;
+  m1 = emlrtCreateNumericMatrix(1, 1, mxINT32_CLASS, mxREAL);
+  *(int32_T *)mxGetData(m1) = varargin_1;
+  emlrtAssign(&d_y, m1);
+  st.site = &ab_emlrtRSI;
+  return emlrt_marshallIn(&st, feval(&st, y, b_y, c_y, d_y, &emlrtMCI), "feval");
+}
+
+static real_T e_fprintf(const emlrtStack *sp)
+{
+  const mxArray *y;
+  static const int32_T iv5[2] = { 1, 7 };
+
+  const mxArray *m3;
+  char_T cv10[7];
+  int32_T i;
+  static const char_T cv11[7] = { 'f', 'p', 'r', 'i', 'n', 't', 'f' };
+
+  const mxArray *b_y;
+  const mxArray *c_y;
+  static const int32_T iv6[2] = { 1, 2 };
+
+  char_T cv12[2];
+  static const char_T cv13[2] = { '\\', 'n' };
+
+  emlrtStack st;
+  st.prev = sp;
+  st.tls = sp->tls;
+  y = NULL;
+  m3 = emlrtCreateCharArray(2, iv5);
+  for (i = 0; i < 7; i++) {
+    cv10[i] = cv11[i];
+  }
+
+  emlrtInitCharArrayR2013a(sp, 7, m3, cv10);
+  emlrtAssign(&y, m3);
+  b_y = NULL;
+  m3 = emlrtCreateDoubleScalar(1.0);
+  emlrtAssign(&b_y, m3);
+  c_y = NULL;
+  m3 = emlrtCreateCharArray(2, iv6);
+  for (i = 0; i < 2; i++) {
+    cv12[i] = cv13[i];
+  }
+
+  emlrtInitCharArrayR2013a(sp, 2, m3, cv12);
+  emlrtAssign(&c_y, m3);
+  st.site = &ab_emlrtRSI;
+  return emlrt_marshallIn(&st, b_feval(&st, y, b_y, c_y, &emlrtMCI), "feval");
+}
+
+static const mxArray *feval(const emlrtStack *sp, const mxArray *b, const
+  mxArray *c, const mxArray *d, const mxArray *e, emlrtMCInfo *location)
+{
+  const mxArray *pArrays[4];
+  const mxArray *m5;
+  pArrays[0] = b;
+  pArrays[1] = c;
+  pArrays[2] = d;
+  pArrays[3] = e;
+  return emlrtCallMATLABR2012b(sp, 1, &m5, 4, pArrays, "feval", true, location);
+}
+
+void b_fprintf(const emlrtStack *sp, int32_T formatSpec)
+{
+  emlrtStack st;
+  st.prev = sp;
+  st.tls = sp->tls;
+  st.site = &f_emlrtRSI;
+  c_fprintf(&st, formatSpec);
+}
+
+void d_fprintf(const emlrtStack *sp)
+{
+  emlrtStack st;
+  st.prev = sp;
+  st.tls = sp->tls;
+  st.site = &p_emlrtRSI;
+  e_fprintf(&st);
+}
+
+/* End of code generation (fprintf.c) */
